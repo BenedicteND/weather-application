@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e50dfcfff4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=PT+Mono&family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <video id="background-video" autoplay loop muted>
+      <source src="media/Pexels Videos 2792967.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form class="form-group" id="city-form">
+            <input
+              type="text"
+              class="city-input col-7"
+              placeholder="Enter city"
+              autofocus
+              id="city-input"
+            />
+
+            <input
+              type="submit"
+              value="Search"
+              class="btn btn-secondary col-2"
+            />
+
+            <button
+              type="submit"
+              class="btn btn-secondary col-0.5"
+              id="current-location-button"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </form>
+
+          <div class="current-place-time">
+            <h1 id="current-city">Copenhagen</h1>
+            <h2 id="current-date-time">Oct 23rd, 10:58</h2>
+          </div>
+
+          <div class="current-weather">
+            <img src="media/sun.png" alt="" />
+            <span class="temperature" id="current-temperature">14</span>
+            <span class="temperature-scale">
+              <a href="#" id="celsius">°C</a>|<a href="#" id="fahrenheit">°F</a>
+            </span>
+            <br />
+            <span class="other-information">
+              Humidity: 71%
+              <br />
+              Wind: 3 km/h
+            </span>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2">
+              Mon
+              <br />
+              <i class="fa-solid fa-cloud coming-icon"></i>
+              <div class="coming-temperature">14 °C</div>
+            </div>
+            <div class="col-sm-2">
+              Tue
+              <br />
+              <i class="fa-solid fa-cloud coming-icon"></i>
+              <div class="coming-temperature">13 °C</div>
+            </div>
+            <div class="col-sm-2">
+              Wed
+              <br />
+              <i class="fa-solid fa-cloud coming-icon"></i>
+              <div class="coming-temperature">13 °C</div>
+            </div>
+            <div class="col-sm-2">
+              Thu
+              <br />
+              <i class="fa-solid fa-cloud coming-icon"></i>
+              <div class="coming-temperature">13 °C</div>
+            </div>
+            <div class="col-sm-2">
+              Fri
+              <br />
+              <i class="fa-solid fa-cloud coming-icon"></i>
+              <div class="coming-temperature">13 °C</div>
+            </div>
+            <div class="col-sm-2">
+              Sat <br />
+              <i class="fa-solid fa-cloud coming-icon"></i>
+              <div class="coming-temperature">13 °C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

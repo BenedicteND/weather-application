@@ -1,0 +1,124 @@
+body {
+  font-family: "PT Mono", monospace;
+  color: white;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  color: #e1e1f8;
+  text-shadow: 0 0 10px #acabf7;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: lighter;
+  color: #c2f0d9;
+  text-shadow: 0 0 4px #42e792;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.city-input {
+  padding: 4.5px 10px;
+  position: relative;
+  top: 2px;
+  border-radius: 5px;
+  background-color: rgb(39, 39, 62);
+}
+
+.btn {
+  background-color: #9cf977a0;
+  text-shadow: 0 0 3px white;
+}
+
+.current-place-time {
+  margin: 10px 0px 40px 0px;
+}
+
+.card {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #15182e;
+  border-color: #fd7e00;
+}
+
+.fa-sun {
+  font-size: 200px;
+  margin: 0;
+}
+.temperature {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  color: #ffc58a;
+  text-shadow: 0 0 10px #fd7e00;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.temperature-scale {
+  position: relative;
+  bottom: 40px;
+  left: 20px;
+  color: #e3e3ff;
+  text-shadow: 0 0 10px #6b6bf8;
+}
+
+.other-information {
+  position: relative;
+  bottom: 110px;
+  left: 285px;
+  font-size: 17px;
+  color: #b1e1fef9;
+  text-shadow: 0 0 5px #58bcfae9;
+}
+
+.row {
+  margin-top: 0px;
+  font-size: 21px;
+  text-align: center;
+  color: #c2f0d9;
+  text-shadow: 0 0 5px #42e792;
+  border: #ec84ff;
+}
+
+.coming-icon {
+  font-size: 40px;
+  color: white;
+}
+
+.current-weather {
+  padding: 0;
+  margin: 0;
+}
+.coming-temperature {
+  color: #f7c8ff;
+  text-shadow: 0 0 5px #de39fb;
+  font-size: 14px;
+}
