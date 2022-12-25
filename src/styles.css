@@ -81,8 +81,7 @@ h3 {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
 .temperature-scale {
@@ -91,6 +90,16 @@ a {
   left: 20px;
   color: #e3e3ff;
   text-shadow: 0 0 10px #6b6bf8;
+}
+
+.temperature-scale .active {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: default;
+}
+
+.temperature-scale .active:hover {
+  text-decoration: none;
 }
 
 .other-information {

@@ -21,18 +21,6 @@ function changeCityInput(event) {
   currentCity.innerHTML = `${cityInput.value}`;
 }
 
-function changeCelsius(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = `14`;
-}
-
-function changeFahrenheit(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = `57`;
-}
-
 function formatDate(timestamp) {
   // calculate the date and time from milliseconds
   let date = new Date(timestamp);
@@ -69,6 +57,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = Math.round(response.data.main.temp);
 }
 
 function retrieveWeatherInfo(city) {
@@ -104,6 +93,7 @@ function showLocationTemperatureCity(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = Math.round(response.data.main.temp);
 }
 
 function handlePosition(position) {
@@ -118,7 +108,24 @@ function getPosition() {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
-changeDate();
+function changeFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 23;
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+  clickCelsius.classList.remove("active");
+  clickFahrenheit.classList.add("active");
+}
+
+function changeCelsius(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = celsiusTemperature;
+  clickCelsius.classList.add("active");
+  clickFahrenheit.classList.remove("active");
+}
+
+let celsiusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", changeCityInput);
@@ -134,3 +141,5 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getPosition);
 
 getPosition();
+
+changeDate();
