@@ -1,6 +1,5 @@
 function changeDate() {
   let currentDate = new Date();
-  console.log(currentDate);
   let days = [
     "Sunday",
     "Monday",
@@ -11,7 +10,7 @@ function changeDate() {
     "Saturday",
   ];
   let day = days[currentDate.getDay()];
-  let h2 = document.querySelector("#current-date-time");
+  let h2 = document.querySelector("#date");
   h2.innerHTML = `${day}, ${currentDate.getHours()}:${currentDate.getMinutes()}`;
 }
 
@@ -34,8 +33,25 @@ function changeFahrenheit(event) {
   currentTemperature.innerHTML = `57`;
 }
 
+function formatDate(timestamp) {
+  // calculate the date and time from milliseconds
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `Last updated: ${day}, ${hours}:${minutes}`;
+}
+
 function showTemperature(response) {
-  console.log(response);
   let trueTemperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = trueTemperature;
@@ -45,6 +61,8 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function retrieveWeatherInfo() {
@@ -55,8 +73,6 @@ function retrieveWeatherInfo() {
 }
 
 function showLocationTemperatureCity(response) {
-  console.log(response.data.name);
-  console.log(response);
   let trueTemperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = trueTemperature;
@@ -69,10 +85,11 @@ function showLocationTemperatureCity(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function handlePosition(position) {
-  console.log(position);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = `a33b693cfbefd271b0ed075f9a8f65f0`;
