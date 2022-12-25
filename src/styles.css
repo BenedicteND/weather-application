@@ -15,6 +15,15 @@ body {
   z-index: -1;
 }
 
+.card {
+  max-width: 600px;
+  margin: 30px auto;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #15182e;
+  border-color: #fd7e00;
+}
+
 h1 {
   font-size: 60px;
   font-family: "Poppins", sans-serif;
@@ -48,18 +57,9 @@ h3 {
   text-shadow: 0 0 3px white;
 }
 
-.current-place-time {
+.current-place-time-description {
   margin: 10px 0px 40px 0px;
-}
-
-.card {
-  max-width: 600px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 10px;
-  background-color: #15182e;
-  border-color: #fd7e00;
+  text-transform: capitalize;
 }
 
 .fa-sun {
@@ -126,6 +126,6 @@ a {
 .author {
   color: #fd7e00c2;
   text-align: center;
-  font-size: 12.5px;
+  font-size: 10px;
   font-family: "Poppins", sans-serif;
 }

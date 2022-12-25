@@ -11,7 +11,6 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
     <script
       src="https://kit.fontawesome.com/e50dfcfff4.js"
       crossorigin="anonymous"
@@ -26,6 +25,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
@@ -38,7 +38,7 @@
           <form class="form-group" id="city-form">
             <input
               type="text"
-              class="city-input col-7"
+              class="city-input col-xl-7"
               placeholder="Enter city"
               autofocus
               id="city-input"
@@ -52,16 +52,17 @@
 
             <button
               type="submit"
-              class="btn btn-secondary col-0.5"
+              class="btn btn-secondary col-1"
               id="current-location-button"
             >
               <i class="fa-solid fa-location-dot"></i>
             </button>
           </form>
 
-          <div class="current-place-time">
+          <div class="current-place-time-description">
             <h1 id="current-city">Copenhagen</h1>
-            <h2 id="current-date-time">Oct 23rd, 10:58</h2>
+            <h2 id="current-date-time"></h2>
+            <h2 id="weather-description"></h2>
           </div>
 
           <div class="current-weather">
@@ -72,9 +73,9 @@
             </span>
             <br />
             <span class="other-information">
-              Humidity: 71%
+              Humidity: <span id="humidity"></span>%
               <br />
-              Wind: 3 km/h
+              Wind: <span id="wind"></span> km/h
             </span>
           </div>
 
@@ -117,7 +118,6 @@
           </div>
         </div>
       </div>
-      <br />
       <div class="author">
         <a
           href="https://github.com/BenedicteND/weather-application"

@@ -35,9 +35,16 @@ function changeFahrenheit(event) {
 }
 
 function showTemperature(response) {
+  console.log(response);
   let trueTemperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = trueTemperature;
+  let descriptionElement = document.querySelector("#weather-description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function retrieveWeatherInfo() {
@@ -49,12 +56,19 @@ function retrieveWeatherInfo() {
 
 function showLocationTemperatureCity(response) {
   console.log(response.data.name);
+  console.log(response);
   let trueTemperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = trueTemperature;
   let LocationCity = response.data.name;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = LocationCity;
+  let descriptionElement = document.querySelector("#weather-description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function handlePosition(position) {
