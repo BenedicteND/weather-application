@@ -71,11 +71,16 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function retrieveWeatherInfo() {
-  let cityInput = document.querySelector("#city-input");
+function retrieveWeatherInfo(city) {
   let apiKey = `a33b693cfbefd271b0ed075f9a8f65f0`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
   axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault;
+  let cityInput = document.querySelector("#city-input");
+  retrieveWeatherInfo(cityInput.value);
 }
 
 function showLocationTemperatureCity(response) {
@@ -117,7 +122,7 @@ changeDate();
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", changeCityInput);
-cityForm.addEventListener("submit", retrieveWeatherInfo);
+cityForm.addEventListener("submit", handleSubmit);
 
 let clickCelsius = document.querySelector("#celsius");
 clickCelsius.addEventListener("click", changeCelsius);
