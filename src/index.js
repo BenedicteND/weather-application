@@ -123,6 +123,6 @@ clickFahrenheit.addEventListener("click", changeFahrenheit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getPosition);
 
-getPosition();
-
 changeDate();
+
+retrieveWeatherInfo("Copenhagen");

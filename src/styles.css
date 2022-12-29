@@ -30,6 +30,11 @@ h1 {
   font-weight: lighter;
   color: #e1e1f8;
   text-shadow: 0 0 10px #acabf7;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-transform: capitalize;
 }
 
 h2 {
@@ -50,6 +55,8 @@ h3 {
   top: 2px;
   border-radius: 5px;
   background-color: rgb(39, 39, 62);
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -65,19 +72,16 @@ h3 {
   text-transform: capitalize;
 }
 
-.fa-sun {
-  font-size: 200px;
-  margin: 0;
-}
 .temperature {
   position: relative;
-  bottom: 20px;
-  left: 20px;
-  font-size: 50px;
+  right: 25px;
+  bottom: 23px;
+  font-size: 60px;
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
   color: #ffc58a;
   text-shadow: 0 0 10px #fd7e00;
+  text-align: left;
 }
 
 a {
@@ -85,11 +89,11 @@ a {
 }
 
 .temperature-scale {
-  position: relative;
-  bottom: 40px;
-  left: 20px;
   color: #e3e3ff;
   text-shadow: 0 0 10px #6b6bf8;
+  position: relative;
+  bottom: 49px;
+  right: 25px;
 }
 
 .temperature-scale .active {
@@ -103,20 +107,22 @@ a {
 }
 
 .other-information {
-  position: relative;
-  bottom: 110px;
-  left: 285px;
-  font-size: 17px;
+  font-size: 20px;
   color: #b1e1fef9;
   text-shadow: 0 0 5px #58bcfae9;
+  margin-bottom: 0px;
+  position: relative;
+  bottom: 25px;
+  right: 15px;
 }
 
 .row {
   margin-top: 0px;
+  padding: 0px;
   font-size: 21px;
   text-align: center;
-  color: #c2f0d9;
-  text-shadow: 0 0 5px #42e792;
+  color: #e1e1f8;
+  text-shadow: 0 0 10px #acabf7;
   border: #ec84ff;
 }
 
@@ -143,7 +149,13 @@ a {
 }
 
 #main-icon {
-  font-size: 200px;
   position: relative;
-  bottom: 30px;
+  bottom: 40px;
+  left: 20px;
+  margin-bottom: 0px;
+}
+
+.wind {
+  position: relative;
+  right: 5px;
 }
