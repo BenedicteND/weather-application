@@ -16,16 +16,16 @@ body {
 }
 
 .card {
-  max-width: 600px;
+  max-width: 550px;
   margin: 30px auto;
-  margin-top: 50px;
+  margin-top: 90px;
   padding: 10px;
   background-color: #15182e;
   border-color: #fd7e00;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 45px;
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
   color: #e1e1f8;
@@ -37,20 +37,16 @@ h1 {
   text-transform: capitalize;
 }
 
-h2 {
-  font-size: 17px;
+h2,
+h3 {
+  font-size: 18px;
   font-weight: lighter;
   color: #c2f0d9;
   text-shadow: 0 0 4px #42e792;
 }
 
-h3 {
-  font-size: 17px;
-  font-weight: lighter;
-}
-
 .city-input {
-  padding: 4.5px 10px;
+  padding: 3.5px 7px;
   position: relative;
   top: 2px;
   border-radius: 5px;
@@ -62,6 +58,7 @@ h3 {
 .btn {
   background-color: #9cf977a0;
   text-shadow: 0 0 3px white;
+  font-size: 15px;
 }
 
 .current-place-time-description {
@@ -76,7 +73,7 @@ h3 {
   position: relative;
   right: 25px;
   bottom: 23px;
-  font-size: 60px;
+  font-size: 45px;
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
   color: #ffc58a;
@@ -92,8 +89,9 @@ a {
   color: #e3e3ff;
   text-shadow: 0 0 10px #6b6bf8;
   position: relative;
-  bottom: 49px;
+  bottom: 45px;
   right: 25px;
+  font-size: 14px;
 }
 
 .temperature-scale .active {
@@ -107,7 +105,7 @@ a {
 }
 
 .other-information {
-  font-size: 20px;
+  font-size: 18px;
   color: #b1e1fef9;
   text-shadow: 0 0 5px #58bcfae9;
   margin-bottom: 0px;
@@ -119,14 +117,13 @@ a {
 .row {
   margin-top: 0px;
   padding: 0px;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   border: #ec84ff;
 }
 
-.coming-icon {
-  font-size: 40px;
-  color: white;
+.forecast-icons {
+  margin: 0;
 }
 
 .current-weather {
@@ -134,9 +131,12 @@ a {
   margin: 0;
 }
 .coming-temperature {
-  color: #f7c8ff;
-  text-shadow: 0 0 5px #de39fb;
-  font-size: 14px;
+  color: #e8b3ffd8;
+  text-shadow: 0 0 10px #ff8ef7;
+
+  position: relative;
+  left: 5px;
+  bottom: 10px;
 }
 
 .author {
@@ -148,9 +148,10 @@ a {
 
 #main-icon {
   position: relative;
-  bottom: 40px;
+  bottom: 25px;
   left: 20px;
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0;
 }
 
 .wind {
@@ -159,11 +160,17 @@ a {
 }
 
 .weather-forecast-minimum {
-  color: #c59aed6c;
-  text-shadow: 0 0 4px #6d09b173;
+  color: #f799fd5a;
+  text-shadow: 0 0 10px #ff3ef24f;
 }
 
 .weather-forecast-date {
   color: #e1e1f8;
   text-shadow: 0 0 10px #acabf7;
+  position: relative;
+  top: 5px;
+}
+
+.col-sm-2 {
+  padding: 0;
 }

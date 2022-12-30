@@ -132,7 +132,7 @@ function displayForecast(response) {
   console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row d-flex justify-content-center">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -143,14 +143,14 @@ function displayForecast(response) {
                 )}</div>
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
-                }@2x.png" alt="weather-icon"></i>
+                }@2x.png" alt="weather-icon" class="forecast-icons" width="60px"></i>
                 <div class="coming-temperature">
-                  <span class="weather-forecast-maximum">${Math.round(
-                    forecastDay.temp.max
-                  )}°</span>
-                  <span class="weather-forecast-minimum">${Math.round(
-                    forecastDay.temp.min
-                  )}°</span>
+                <span class="weather-forecast-maximum">${Math.round(
+                  forecastDay.temp.max
+                )}°</span>
+              <span class="weather-forecast-minimum">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
                 </div>
               </div>
             `;
