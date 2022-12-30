@@ -119,10 +119,8 @@ a {
 .row {
   margin-top: 0px;
   padding: 0px;
-  font-size: 21px;
+  font-size: 16px;
   text-align: center;
-  color: #e1e1f8;
-  text-shadow: 0 0 10px #acabf7;
   border: #ec84ff;
 }
 
@@ -158,4 +156,14 @@ a {
 .wind {
   position: relative;
   right: 5px;
+}
+
+.weather-forecast-minimum {
+  color: #c59aed6c;
+  text-shadow: 0 0 4px #6d09b173;
+}
+
+.weather-forecast-date {
+  color: #e1e1f8;
+  text-shadow: 0 0 10px #acabf7;
 }
