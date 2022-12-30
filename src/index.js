@@ -58,6 +58,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusTemperature = Math.round(response.data.main.temp);
+  displayForecast();
 }
 
 function retrieveWeatherInfo(city) {
@@ -108,6 +109,28 @@ function changeCelsius(event) {
   clickFahrenheit.classList.remove("active");
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-sm-2">
+                <div class="weather-forecast-date">${day}</div>
+                <i class="fa-solid fa-cloud coming-icon"></i>
+                <div class="coming-temperature">
+                  <span class="weather-forecast-maximum">14°</span>
+                  <span class="weather-forecast-minimum">8°</span>
+                </div>
+              </div>
+            `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
@@ -126,3 +149,5 @@ currentLocationButton.addEventListener("click", getPosition);
 changeDate();
 
 retrieveWeatherInfo("Copenhagen");
+
+displayForecast();
