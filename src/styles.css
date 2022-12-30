@@ -71,7 +71,7 @@ h3 {
 
 .temperature {
   position: relative;
-  right: 25px;
+
   bottom: 23px;
   font-size: 45px;
   font-family: "Poppins", sans-serif;
@@ -90,7 +90,7 @@ a {
   text-shadow: 0 0 10px #6b6bf8;
   position: relative;
   bottom: 45px;
-  right: 25px;
+
   font-size: 14px;
 }
 
@@ -111,7 +111,6 @@ a {
   margin-bottom: 0px;
   position: relative;
   bottom: 25px;
-  right: 15px;
 }
 
 .row {
@@ -131,8 +130,8 @@ a {
   margin: 0;
 }
 .coming-temperature {
-  color: #ffd1b3d8;
-  text-shadow: 0 0 10px #ff5e00;
+  color: #ffb3fbd8;
+  text-shadow: 0 0 10px #ff00dd;
 
   position: relative;
   left: 5px;
@@ -149,19 +148,19 @@ a {
 #main-icon {
   position: relative;
   bottom: 25px;
-  left: 20px;
+  left: 5px;
   margin: 0px;
   padding: 0;
 }
 
 .wind {
   position: relative;
-  right: 5px;
+  right: 1px;
 }
 
 .weather-forecast-minimum {
-  color: #ffa2516e;
-  text-shadow: 0 0 10px #ff4d004f;
+  color: #f07eff61;
+  text-shadow: 0 0 10px #ff00d951;
 }
 
 .weather-forecast-date {
@@ -173,4 +172,8 @@ a {
 
 .col-sm-2 {
   padding: 0;
+}
+
+.col-sm-6.second {
+  text-align: left;
 }
