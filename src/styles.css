@@ -131,8 +131,8 @@ a {
   margin: 0;
 }
 .coming-temperature {
-  color: #e8b3ffd8;
-  text-shadow: 0 0 10px #ff8ef7;
+  color: #ffd1b3d8;
+  text-shadow: 0 0 10px #ff5e00;
 
   position: relative;
   left: 5px;
@@ -160,8 +160,8 @@ a {
 }
 
 .weather-forecast-minimum {
-  color: #f799fd5a;
-  text-shadow: 0 0 10px #ff3ef24f;
+  color: #ffa2516e;
+  text-shadow: 0 0 10px #ff4d004f;
 }
 
 .weather-forecast-date {
